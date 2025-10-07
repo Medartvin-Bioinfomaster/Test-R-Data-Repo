@@ -16,6 +16,11 @@ def les_budget():
     except FileNotFoundError:
         print("Filen ble ikke funnet.")
 
+# Funksjon for å skrive budsjett til filen
+def skriv_budget(nytt_belop):
+    with open(budgetFileLink, 'w') as fil:
+        fil.write(f"{nytt_belop}\n(kroner)")
+        print(f"Budsjett skrevet til filen: {nytt_belop} (kroner)")
 
 print("Hello welcome to the store. You have the items: ")
 print(harPålegg)
@@ -41,5 +46,19 @@ for item in handleliste:
 
 print("After shopping, you now have these products in your refrigirator")
 print(harPålegg)
+
+#Try changing the budget
+nytt_belop = 1200 - 50
+skriv_budget(nytt_belop)
+
+print("TEST: read from budget.txt file? ")
+les_budget()
+
+#Try adding 25kr
+nytt_belop = nytt_belop + 25
+skriv_budget(nytt_belop)
+
+print("TEST: read from budget.txt file? ")
+les_budget()
 
 print("Do you have smør now? " + harSmør.__str__())
