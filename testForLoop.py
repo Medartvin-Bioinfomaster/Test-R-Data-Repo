@@ -28,9 +28,13 @@ print(harPålegg)
 print("TEST: read from budget.txt file? ")
 les_budget()
 
+#TODO: add the input handling for the user to be able to add items to the shoppingcart. Or remove stuff.
+
+#TODO: calculate the items worth when adding items to basket, the basket should have a "price" and each items worth should increase this price when added
 for item in handleliste:
 
     if harPålegg.__contains__(item):
+        #FIXME: In this section here, should we deny the user from buying items they already own?
         print("We already have this pålegg")
 
     else:
@@ -43,6 +47,8 @@ for item in handleliste:
             break
         print("User should now have items!")
 
+
+#TODO: Money handling, update budget.txt with the amount the items cost, and add to list
 
 print("After shopping, you now have these products in your refrigirator")
 print(harPålegg)
