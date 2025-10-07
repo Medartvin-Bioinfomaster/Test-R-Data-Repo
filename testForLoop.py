@@ -14,7 +14,9 @@ for item in handleliste:
         print("We did not have this, adding to shopping cart and buying!")
         harPålegg.append(item)
         if (item.__contains__("smør")):
-            harSmør = True
+            harSmør = False
+        if item.startswith("s"):
+            break
         print("User should now have items!")
 
 
