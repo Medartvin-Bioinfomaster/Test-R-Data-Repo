@@ -15,6 +15,13 @@ def encrypt_strings (stringname):
         else:
             newstringEncrypter = newstringEncrypter + 1 + letter
 
+    #FIXME: these prints doesn't show, why?
+
     print("Encryption complete!")
     print("Final encryption")
     print(newstringEncrypter)
+
+
+#TODO: add another function that adds 2 to the string
+
+#TODO: add input and let user create encrypted strings
