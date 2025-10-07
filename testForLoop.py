@@ -1,0 +1,4 @@
+pålegg = "salami"
+
+harSmør = False
+
