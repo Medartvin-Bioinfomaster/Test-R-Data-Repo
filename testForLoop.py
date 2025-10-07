@@ -5,9 +5,23 @@ harSmør = False
 
 handleliste = ["skinke", "melk", "ost", "brødskiver", "salami", "agurk", "paprika", "kjøttdeig", "smør"]
 
+budgetFileLink = "budget.txt"
+
+# Funksjon for å lese budsjettet fra filen
+def les_budget():
+    try:
+        with open(budgetFileLink, 'r') as fil:
+            innhold = fil.read()
+            print("Innholdet i budsjettfilen:", innhold.strip())
+    except FileNotFoundError:
+        print("Filen ble ikke funnet.")
+
 
 print("Hello welcome to the store. You have the items: ")
 print(harPålegg)
+
+print("TEST: read from budget.txt file? ")
+les_budget()
 
 for item in handleliste:
 
