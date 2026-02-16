@@ -6,6 +6,13 @@ subtraction <- function(a, b) {
     return(a - b)
 }
 
+# New: multiplication
+multiplication <- function(a, b) {
+  return(a * b)
+}
+
+
+
 # so this is how it works:
 x <- 10
 y <- 5
@@ -19,3 +26,9 @@ sVal <- subtraction(x, y)
 
 print(aVal)
 print(sVal)
+
+# ----------------------------
+# Basic calculator functions
+# ----------------------------
+
+
